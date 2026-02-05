@@ -1,0 +1,103 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F9FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7DBF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2B5A9E;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5B942;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8A828;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Abstract connection nodes representing vision and connectivity -->
+  <!-- Central hub -->
+  <circle cx="200" cy="150" r="35" fill="url(#blueGradient)" opacity="0.9">
+    <animate attributeName="r" values="35;38;35" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Outer nodes -->
+  <circle cx="100" cy="80" r="20" fill="url(#goldGradient)" opacity="0.8"/>
+  <circle cx="300" cy="80" r="20" fill="url(#goldGradient)" opacity="0.8"/>
+  <circle cx="80" cy="180" r="18" fill="url(#goldGradient)" opacity="0.8"/>
+  <circle cx="320" cy="180" r="18" fill="url(#goldGradient)" opacity="0.8"/>
+  <circle cx="130" cy="240" r="22" fill="url(#goldGradient)" opacity="0.8"/>
+  <circle cx="270" cy="240" r="22" fill="url(#goldGradient)" opacity="0.8"/>
+  
+  <!-- Connection lines -->
+  <line x1="200" y1="150" x2="100" y2="80" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="150" x2="300" y2="80" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="150" x2="80" y2="180" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="150" x2="320" y2="180" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="150" x2="130" y2="240" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="150" x2="270" y2="240" stroke="#2B5A9E" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Secondary connections -->
+  <line x1="100" y1="80" x2="80" y2="180" stroke="#F5B942" stroke-width="1.5" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="300" y1="80" x2="320" y2="180" stroke="#F5B942" stroke-width="1.5" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="130" y1="240" x2="270" y2="240" stroke="#F5B942" stroke-width="1.5" opacity="0.3" stroke-dasharray="5,5"/>
+  
+  <!-- Icon elements in center -->
+  <!-- Eye representing vision -->
+  <g transform="translate(200, 140)">
+    <!-- Outer eye shape -->
+    <ellipse cx="0" cy="0" rx="25" ry="15" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <!-- Pupil -->
+    <circle cx="0" cy="0" r="8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="0" cy="0" r="4" fill="#F5B942" opacity="1"/>
+    
+    <!-- Light rays -->
+    <line x1="-30" y1="0" x2="-35" y2="0" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="0" x2="35" y2="0" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="-22" y1="-18" x2="-26" y2="-22" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="22" y1="-18" x2="26" y2="-22" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="-22" y1="18" x2="-26" y2="22" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="22" y1="18" x2="26" y2="22" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <!-- Top left corner accent -->
+  <circle cx="30" cy="30" r="4" fill="#F5B942" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="25" r="3" fill="#2B5A9E" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Bottom right corner accent -->
+  <circle cx="370" cy="270" r="4" fill="#F5B942" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="275" r="3" fill="#2B5A9E" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Abstract innovation symbols -->
+  <!-- Lightbulb concept top -->
+  <circle cx="200" cy="50" r="8" fill="none" stroke="#F5B942" stroke-width="2" opacity="0.5"/>
+  <line x1="200" y1="58" x2="200" y2="68" stroke="#F5B942" stroke-width="2" opacity="0.5"/>
+  <line x1="195" y1="68" x2="205" y2="68" stroke="#F5B942" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Text "VISION" integrated -->
+  <text x="200" y="280" font-family="'Playfair Display', serif" font-size="32" font-weight="700" 
+        fill="#2B5A9E" text-anchor="middle" opacity="0.8">VISION</text>
+</svg>
